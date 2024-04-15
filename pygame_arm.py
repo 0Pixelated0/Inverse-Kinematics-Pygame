@@ -23,6 +23,7 @@ tolerance = 1
 
 # Define goal properties
 goal_pos = pygame.Vector2(screen_width // 2, screen_height // 2)
+pole_pos = pygame.Vector2(100, 100)
 
 hue_offset = 0
 
@@ -60,7 +61,7 @@ def forwards(segments):
 
 def pole_solve(segments):
     for i in range(len(segments)-1):
-        r = (pygame.Vector2(100, 100) - segments[i].position).length()
+        r = (pole_pos - segments[i].position).length()
         l = segment_length/r
         segments[i+1].position = (1 - l) * segments[i].position + l * pygame.Vector2(100, 100)
 
@@ -122,7 +123,7 @@ while running:
         pygame.draw.circle(screen, rainbow_rgb(i, segment_amount, hue_offset), segments[i+1].position, round((segment_amount-i)/(segment_amount/20))+10)
 
     # Draw goal
-    #pygame.draw.circle(screen, RED, goal_pos, 10)
+    pygame.draw.circle(screen, RED, pole_pos, 10)
 
     pygame.display.flip()
 
