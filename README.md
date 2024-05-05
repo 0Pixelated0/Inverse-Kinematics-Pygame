@@ -37,7 +37,7 @@ Repeat these two methods until the end effector reaches a specific distance from
 -   Check if the total length of the limb (sum of segment lengths) is less than the distance between the limb's root and the end effector. If so, the end effector is out of reach.
 ## Bending Towards a Point
 - Initially extend the limb fully towards the desired point.
-- Iterate through the FABRIK algorithm (backwards and forwards reaching phases) for at least 10 iterations.
+- Iterate through the FABRIK algorithm (backwards and forwards reaching phases) for at least 10 iterations. (10 as a "maximum" is not required, just recommended for most use cases)
 
 The limb bends towards the desired point while ensuring that P<sub>3</sub>​ (the end effector) remains at the target 
 
