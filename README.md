@@ -1,3 +1,4 @@
+
 # Inverse Kinematics using the FABRIK Algorithm
 The **FABRIK** (_Forward And Backward Reaching Inverse Kinematics_) algorithm is used in computer graphics and robotics to solve the inverse kinematics problem efficiently. Inverse kinematics is about figuring out the joint angles of a robotic arm or the position of a character's limbs given a desired end-effector position (like the hand of a robot or the foot of a character in animation).
 ## Initialization
@@ -43,3 +44,9 @@ The limb bends towards the desired point while ensuring that P<sub>3</sub>​ (t
 
 <sub> this should be how the whole thing works</sub>
 ![](https://github.com/0Pixelated0/Inverse-Kinematics-Pygame/blob/main/End.png?raw=true)
+
+
+
+
+Example Video of pygame_arm.py:
+![](https://github.com/0Pixelated0/Inverse-Kinematics-Pygame/blob/main/fabrik%20ik.gif?raw=true)
