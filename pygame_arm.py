@@ -63,7 +63,7 @@ def pole_solve(segments):
     for i in range(len(segments)-1):
         r = (pole_pos - segments[i].position).length()
         l = segment_length/r
-        segments[i+1].position = (1 - l) * segments[i].position + l * pygame.Vector2(100, 100)
+        segments[i+1].position = (1 - l) * segments[i].position + pygame.Vector2(l * pole_pos[0], l * pole_pos[1])
 
 def solve(segments):
     d = (segments[1].position - goal_pos).length()
@@ -108,6 +108,8 @@ while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
+        if event.type == MOUSEBUTTONDOWN:
+            pole_pos = pygame.mouse.get_pos()
 
     # Update goal position based on mouse input
     goal_pos = pygame.Vector2(pygame.mouse.get_pos())
